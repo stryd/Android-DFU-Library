@@ -1923,7 +1923,7 @@ public abstract class DfuBaseService extends IntentService implements DfuProgres
 		updateForegroundNotification(builder);
 
 		try {
-			startForeground(NOTIFICATION_ID, builder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC);
+			startForeground(NOTIFICATION_ID, builder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE);
 		} catch (final SecurityException e) {
 			loge("Service cannot be started in foreground", e);
 			logi("Starting DFU service in background instead");
